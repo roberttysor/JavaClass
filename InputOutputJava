@@ -1,0 +1,30 @@
+package inputoutput;
+//imported scanner for variable input
+import java.util.Scanner;
+
+public class InputOutput {
+
+    //  argues the command line arguments
+    public static void main(String[] args) {
+
+//Using print statements
+        System.out.print("Print first ");
+        System.out.print("Print second ");
+//Using println statements
+        System.out.println("Print third");
+        System.out.println("Print fourth");
+        System.out.println("Print fifth");
+//Create a scanner for inputs
+        Scanner input = new Scanner(System.in);
+//Get the color and display it
+        System.out.println("What is your favorite color?");
+        String color = input.nextLine();
+        System.out.println("You wrote: " + color);
+//Get the num of apples and display
+        System.out.println("How many apples do you have?");
+        int numApples = input.nextInt();
+        System.out.println("You wrote: " + numApples);
+//Close the scanner
+        input.close();
+    }
+}
