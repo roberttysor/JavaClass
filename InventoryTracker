@@ -1,0 +1,77 @@
+/* 
+ * Robert Tysor
+ *
+ * IT 145: Foundations in App Development
+ *
+ * March 19, 2017
+ *
+ * Inventory Tracker: Module Two Assignment
+ */
+package inventorytracker;
+
+import java.util.Scanner;
+
+
+
+    public class InventoryTracker {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //CREATE New Scanner for User input
+    
+        Scanner scnr = new Scanner(System.in);
+        
+        //INITIALIZE variables:
+        
+          //ORANGES
+            int orangesOnHand=0;
+            int orangesFullStock=0;
+            int orangesOrder=0;
+        
+          //APPLES
+            int applesOnHand=0;
+            int applesFullStock=0;
+            int applesOrder=0;
+        
+        //PROMPT User to INPUT quantity (orangesOnHand)
+        
+          System.out.println("Enter quantity of ORANGES ON HAND: ");
+          orangesOnHand = scnr.nextInt();
+       
+        // PROMPT User to input quantity (orangesFullStock)
+        
+            System.out.println("Enter quantity of ORANGES when STOCK is FULL (MAX)");
+            orangesFullStock = scnr.nextInt();
+        
+        // CALCULATE orangesOrder (needed for FULL STOCK)
+        
+            orangesOrder = (orangesFullStock - orangesOnHand);
+        
+        
+        //PROMPT User to INPUT quantity (applesOnHand)
+        
+            System.out.println("Enter quantity of APPLES ON HAND");
+            applesOnHand = scnr.nextInt();
+        
+        //PROMPT User to INPUT quantity (applesFullStock)
+        
+        System.out.println("Enter quantity of APPLES when STOCK is FULL (MAX");
+        applesFullStock = scnr.nextInt();
+        
+        //CALCULATE applesOrder (needed for FULL STOCK)
+        
+        applesOrder = (applesFullStock - applesOnHand);
+        
+        //DISPLAY results of Inventory check to USER
+        System.out.println("To achieve FULL STOCK, order: " +orangesOrder+ " Oranges, and " +applesOrder+ " apples." );
+        
+        
+        
+        
+        
+    }
+    
+}
