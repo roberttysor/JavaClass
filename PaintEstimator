@@ -1,0 +1,59 @@
+/* Robert Tysor
+ *
+ * IT 145: Foundations in App. Development
+ *
+ * March 19, 2017
+ */
+
+
+
+    import java.util.Scanner;
+    import static java.lang.Math.round;
+
+//IMPORTED Math.round method for utilization at line 35.
+
+    public class PaintEstimator {
+        public static void main(String[] args) {
+            Scanner scnr = new Scanner(System.in);
+                
+      //INITIALIZE variables (integer, double and final)          
+                
+             double wallHeight = 0.0;
+             double wallWidth = 0.0;
+             double wallArea = 0.0;
+             double gallonsPaintNeeded = 0.0;
+             int cansNeeded = 0;
+             final double squareFeetPerGallons = 350.0;
+             final double gallonsPerCan = 1.0;
+        
+
+      // Prompts User to ENTER wall height(in feet)
+        
+         System.out.println("Enter wall height (feet): ");
+         wallHeight = scnr.nextDouble();
+      
+      // Prompts User to ENTER wall width(in feet)
+        
+         System.out.println("Enter wall width (feet): ");
+         wallWidth = scnr.nextDouble();
+      
+      // Calculate and output wall area
+      
+         wallArea = (wallHeight * wallWidth);
+         System.out.println("Wall area: "+wallArea+" square feet");
+      
+      // Calculate and output the amount of paint in gallons needed to paint the wall
+      
+         gallonsPaintNeeded = wallArea/squareFeetPerGallons;
+         System.out.println("Paint needed: " + gallonsPaintNeeded + " gallons");
+      
+      // Calculate and output the number of 1 gallon cans needed to paint the wall, rounded up to nearest integer
+      
+         cansNeeded = (int) Math.round(gallonsPaintNeeded / gallonsPerCan); 
+      
+      // CASTED gallonsPaintNeeded from DOUBLE to INTEGER, ROUNDED UP to nearest integer
+         System.out.println("Cans needed: " + cansNeeded + " can(s)");  
+
+      
+   }
+}
