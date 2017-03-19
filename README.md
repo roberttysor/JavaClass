@@ -13,6 +13,7 @@ My assignment work from entry level java class
  // 3. BasicInputJava
  // 4. finalProject.Java
  // 5. PaintEstimator
+ // 6. InventoryTracker
    
  
  
