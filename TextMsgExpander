@@ -1,0 +1,67 @@
+/*This is a simple text message expansion, taking preset abbreviations
+ * and expanding them to the full statement (i.e. IDK = I don't know)
+ *
+ *Author: Robert Tysor
+ */
+
+import java.util.Scanner;
+
+public class TextMsgExpander {
+
+    
+    public static void main(String[] args) {
+        
+        Scanner scnr;
+        scnr = new Scanner(System.in);
+        
+    String newMsg;
+    
+        String BFF = "best friend forever";
+        String IDK = "I don't know";
+        String JK = "just kidding";
+        String TMI = "too much information";
+        String TTYL = "talk to you later";
+        
+        System.out.println("Enter text: ");
+        newMsg=scnr.nextLine();
+        
+        System.out.println("You entered: "+newMsg);
+        System.out.println();
+        
+        if(newMsg.contains("BFF"))
+        {
+            newMsg=newMsg.replace("BFF",BFF);
+            System.out.println("Replaced \"BFF\" with "+"\"" + BFF +"\"" + ".");
+        }
+    
+        if(newMsg.contains("IDK"))
+        {
+            newMsg=newMsg.replace("IDK", IDK);
+            System.out.println("Replaced \"IDK\" with "+"\"" + IDK +"\"" + ".");
+        }
+        
+        if(newMsg.contains("JK"))
+        {
+            newMsg=newMsg.replace("JK", JK);
+            System.out.println("Replaced \"JK\" with "+"\"" + JK +"\"" + ".");
+            
+        }
+            
+        if(newMsg.contains("TMI"))
+        {
+            newMsg=newMsg.replace("TMI", TMI);
+            System.out.println("Replaced \"TMI\" with "+"\"" + TMI +"\"" + ".");
+        }
+        
+        if(newMsg.contains("TTYL"))
+        {
+            newMsg=newMsg.replace("TTYL", TTYL);
+            System.out.println("Replaced \"TTYL\" with "+"\"" + TTYL +"\"" + ".");
+        }
+        
+    System.out.println();
+    System.out.println("Expanded: "+newMsg);
+    
+    }
+    
+}
