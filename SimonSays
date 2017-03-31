@@ -1,0 +1,41 @@
+/* a simple pattern matcher that issues a score
+ * based on pattern matching
+ */
+
+import java.util.Scanner;
+
+public class SimonSays {
+   public static void main (String [] args) {
+      String simonPattern = "";
+      String userPattern = "";
+      int userScore = 0;
+      int i = 0;
+
+      userScore = 0;
+      simonPattern = "RRGBRYYBGY";
+      userPattern  = "RRGBBRYBGY";
+   
+      char a;
+      char b;
+      
+      for (i=0; i<10; i++) {
+         
+         a = simonPattern.charAt(i);
+         b = userPattern.charAt(i);
+         
+         if (a == b) {
+            userScore = userScore + 1;
+            
+            continue;
+         }
+         else{
+            break;
+         }
+      }
+      
+
+      System.out.println("userScore: " + userScore);
+
+      return;
+   }
+}
