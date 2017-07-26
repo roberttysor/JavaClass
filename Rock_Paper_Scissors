@@ -1,0 +1,48 @@
+//Built by Robert Tysor, 2017. Learning basic JavaScript
+
+var userPick = prompt("Do you pick Rock, Paper or Scissors?");
+var compPick = Math.random(); // generates compPick input (random)
+
+if (compPick < 0.34) {
+    compPick = "rock";
+}
+else if(compPick <= 0.67) {
+    compPick = "paper";
+}
+else {
+    compPick = "scissors";
+}
+console.log("Computer:" + " " + compPick);
+//versus compares rock, paper or scissors for output
+var versus = function (choice1, choice2) {
+    //in case of a tie
+    if (choice1===choice2){
+        return "The result is a tie!";
+    }
+    else if (choice1 === "rock") {
+        if(choice2 === "scissors") {
+            return "rock wins";
+        }
+        else {
+            return "paper wins";
+        }
+    }
+    else if (choice1 === "paper") {
+        if(choice2 === "rock") {
+            return "paper wins";
+        }
+        else {
+            return "scissors win";
+        }
+    }
+    else if (choice1 === "scissors") {
+        if (choice2 === "paper") {
+            return "scissors win";
+        }
+        else {
+            return "rock wins";
+        }
+    }
+}
+
+versus(userPick, compPick)
